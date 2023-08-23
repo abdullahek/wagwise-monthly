@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "body": "*[Registration 1/27]*\nWhat is your gender?\n\n1) Male\n2) Female\n3) Prefer not to say"
+    },
+    {
+      "body": "*[Registration 2/27]*\nPlease confirm your population group?\n\n1) African\n2) Coloured\n3) Indian\n4) White\n5) Other"
+    },
+    {
+      "body": "*[Registration 3/27]*\nAre you a South African Citizen?\n\n1) Yes\n2) No"
+    },
+    {
+      "body": "*[Registration 4/27]*\nHow old are you?\n\n1) 18-29 years old\n2) 30-34 years old\n3) 35-50 years old\n4) 51-65 years old\n5) Above 65 years old"
+    },
+    {
+      "body": "*[Registration 5/27]*\nWhich Province do you live in?\n\n1) Eastern Cape\n2) Free State\n3) Gauteng\n4) KwaZulu Natal\n5) Limpopo\n6) Mpumalanga\n7) Northern Cape\n8) North West\n9) Western Cape"
+    },
+    {
+      "body": "*[Registration 6/27]*\nWhat is your employment status?\n\n1) Student\n2) Part-time employed\n3) Self-employed\n4) Unemployed\n5) Employed"
+    },
+    {
+      "body": "*[Registration 7/27]*\nWhat sector are you employed in?\n\n1) Public sector\n2) Private Sector\n3) Student or unemployed"
+    },
+    {
+      "body": "*[Registration 8/27]*\nWhat is your personal monthly income including stipends, grants, wages and other income?\n\n1) No income\n2) R1 - R3 000\n3) R3 001 - R8 000\n4) R8 001 - R15 000\n5) R15 001 - R25 500\n6) Over R25 500"
+    },
+    {
+      "body": "*[Registration 9/27]*\nWhat is your highest level of education?\n\n1) 0 - Grade 9\n2) Grade 9 - less Matric\n3) Completed Matric\n4) Post Matric Qualification"
+    },
+    {
+      "body": "*[Registration 10/27]*\nDo you have a disability?\n\n1) Yes\n2) No"
+    }
+  ]
+}

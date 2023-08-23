@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "body": "*[Monthly 1/3]*\nWhen you experienced a financial emergency or had an expense that you didn’t plan for, in the last month did you…\n\n(Select all options that apply to you)\n\n1) Have enough saved to pay for the unexpected expense\n2) Take a loan from a bank or from your home loan\n3) Borrow money from friends or family\n4) Borrow money from a microlender or somewhere else other than a bank\n5) Borrow money from a funding source like a stokvel\n6) Use a credit card to pay the expense\n7) Not pay\n8) I did not have a financial emergency in the last month\n",
+      "num_ans": 8
+    },
+    {
+      "body": "*[Monthly 2/3]*\nWhen you faced a financial problem, in the last month did you…\n\n(Select all options that apply to you)\n\n1) Refer to the WageWise booklet and tools\n2) Refer to the WageWise website for helpful resources\n3) Refer to the WageWise Facebook Page\n4) Reach out to other WageWise participants \n5) Refer to another source of assistance\n6) None of the above\n",
+      "num_ans": 6
+    },
+    {
+      "body": "*[Monthly 3/3]*\nIn the last month, have you done any of the following\n\n(Select all options that apply to you)\n\n1) Budgeted\n2) Opened a savings account to start saving\n3) Paid off a debt or credit obligation, e.g., closed a clothing store account\n4) Met your monthly debt repayments\n5) Negotiated a better interest rate on your debt\n6) Seen a financial advisor\n7) Started saving for retirement\n8) Shared what I have learned from WageWise with my family and friends\n",
+      "num_ans": 8
+    },
+    {
+      "body": "*[Monthly 1/3]*\nHave you been saving your monthly income on a monthly basis?\n\n(Select one option that is most true for you)\n\n1) I save a portion of my income on a monthly basis\n2) I save a portion of my income when I can\n3) I have not been saving any of my income on a monthly basis\n",
+      "num_ans": 3
+    },
+    {
+      "body": "*[Monthly 2/3]*\nIf you have been saving any of your income, how do you save?\n\n(Select all options that apply to you)\n\n1) I save through a stokvel or savings club\n2) I deposit my savings into my bank account\n3) I have a savings product like a unit trust\n4) I save in a retirement or pension fund \n5) I have a funeral policy that I use for my saving\n6) I have not been saving my monthly income\n",
+      "num_ans": 5
+    },
+    {
+      "body": "*[Monthly 3/3]*\nHave you been able to meet your monthly repayments?\n\n(Select one option that is most true for you)\n\n1) Yes, I have\n2) Sometimes I have\n3) No, I have not\n",
+      "num_ans": 3
+    },
+    {
+      "body": "*[Monthly 1/3]*\nHow worried are you about being able to pay your debts?\n\n(Select one option that is most true for you)\n\n1) I am always worried\n2) I am sometimes worried\n3) I am rarely worried\n4) I am not worried\n",
+      "num_ans": 4
+    },
+    {
+      "body": "*[Monthly 2/3]*\nWhat worried you most about your finances this month?\n\n(Select all options that apply to you)\n1) Making payments towards debt\n2) Not saving enough\n3) Needing to take out credit for something important\n4) Not having enough money to pay for living expenses\n5) Not having enough money to retire\n6) Overspending\n7) Losing my job \n8) I have no financial concerns this past month\n9) Other\n",
+      "num_ans": 9
+    },
+    {
+      "body": "*[Monthly 3/3]*\nWhat did you do this month that made you happy about your money?\n\n(Select all options that apply to you)\n1) Making payments towards my debt\n2) Saving more than planned\n3) Buying something I needed without borrowing\n4) Getting through the month without financial difficulty\n5) Saving adequately towards my retirement\n6) Paying all my bills\n7) Spending within my budget\n8) Other\n",
+      "num_ans": 8
+    }
+  ]
+}
