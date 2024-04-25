@@ -9,7 +9,7 @@ username = os.environ.get('NAME')
 password = os.environ.get('PASSWORD')
 
 
-params = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};SERVER=" + server + ';DATABASE=' + database +
+params = urllib.parse.quote_plus("DRIVER={ODBC Driver 18 for SQL Server};SERVER=" + server + ';DATABASE=' + database +
                                  ";UID=" + username + ';PWD=' + password)
 
 
