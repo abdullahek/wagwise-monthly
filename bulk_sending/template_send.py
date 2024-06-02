@@ -40,7 +40,7 @@ def check_user_in_airtime_list(num):
     password = os.environ.get('PASSWORD')
 
     conn = pyodbc.connect(
-        'DRIVER={ODBC Driver 19 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
+        'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
     cursor = conn.cursor()
 
     cursor.execute(f"SELECT * FROM airtime_correction_numbers WHERE number={num}")
