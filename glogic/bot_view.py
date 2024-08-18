@@ -59,6 +59,8 @@ def bot():
 
         elif ('are you still working' in incoming_msg):
             out = "Yes, all is well"
+        elif ('Yes' in incoming_msg):
+            out = "Thanks for your willing in the participation."
 
         
         else:
