@@ -30,6 +30,9 @@ def bot():
         user.last_month_completed = 100
         db.session.commit()
         return str(resp)
+    if 'Participate' in incoming_msg:
+        resp.message("Thanks its Yes")
+        return str(resp)
 
     if "view" in session:
         print("Redirect to: " + session['view'])
