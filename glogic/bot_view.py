@@ -31,7 +31,7 @@ def bot():
         db.session.commit()
         return str(resp)
     if 'part' in incoming_msg:
-        resp.message("Thanks its Yes")
+        resp.message("Thank You for Opting to  Participate in our Endline Survey!")
         return str(resp)
 
     if "view" in session:
