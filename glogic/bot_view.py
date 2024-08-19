@@ -30,7 +30,7 @@ def bot():
         user.last_month_completed = 100
         db.session.commit()
         return str(resp)
-    if 'Participate' in incoming_msg:
+    if 'part' in incoming_msg:
         resp.message("Thanks its Yes")
         return str(resp)
 
@@ -62,7 +62,7 @@ def bot():
 
         elif ('are you still working' in incoming_msg):
             out = "Yes, all is well"
-        elif ('Yes' in incoming_msg):
+        elif ('part' in incoming_msg):
             out = "Thanks for your willing in the participation."
 
         
