@@ -23,6 +23,51 @@ def del_from_db(num):
         cursor.execute(f"DELETE FROM users WHERE id = {id}")
         cursor.commit()
 
+def update_response(msg, num):
+     server = os.environ.get('SERVER')
+    database = os.environ.get('DATABASE')
+    username = os.environ.get('NAME')
+    password = os.environ.get('PASSWORD')
+
+     conn = pyodbc.connect(
+        'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
+    cursor = conn.cursor()
+    cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE PhoneNumber = ?", (msg, int(num)))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print(msg)
+    print(num)
+    return True 
+def validate_num(num):
+    print(num)
+    server = os.environ.get('SERVER')
+    database = os.environ.get('DATABASE')
+    username = os.environ.get('NAME')
+    password = os.environ.get('PASSWORD')
+
+    conn = pyodbc.connect(
+        'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
+  
+  
+    cursor = conn.cursor()
+
+    cursor.execute(f"SELECT PhoneNumber, ID FROM Campaign_Responses WHERE PhoneNumber='{num}'")
+
+    rows = cursor.fetchall()
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print(rows)    
+   
+    if not rows:
+
+        return False
+    else:
+            # Corrected SQL update statement
+        #cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE ID = ?", (msg, row[1]))
+         
+        return True
 def validate_num(num,msg):
     server = os.environ.get('SERVER')
     database = os.environ.get('DATABASE')
