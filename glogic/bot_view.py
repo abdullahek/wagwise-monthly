@@ -4,6 +4,8 @@ from .models import Responses, User
 from flask import request, session, url_for
 from twilio.twiml.messaging_response import MessagingResponse
 from bulk_sending.template_send import check_user_in_airtime_list
+from bulk_sending.sql_stuff import validate_num
+from bulk_sending.sql_stuff import update_response
 
 
 @app.route('/message', methods=['GET', 'POST'])
@@ -23,8 +25,16 @@ def bot():
     print("INCOMING MSG: " + incoming_msg)
 
     resp = MessagingResponse()
-    result=validate_num(num) 
-    resp.message(result)
+
+    result = validate_num(num) 
+    if result:
+        # resp.message("Thank you! Number is validated")
+        response= update_response(incoming_msg, num)
+    else:
+        pass
+    #     resp.message("Number is not validated")
+    
+    
     if 'stop' in incoming_msg:
         resp.message("We will be sad to see you go.")
         user = User.query.filter(User.number==num).first()
