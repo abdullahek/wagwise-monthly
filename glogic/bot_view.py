@@ -23,7 +23,8 @@ def bot():
     print("INCOMING MSG: " + incoming_msg)
 
     resp = MessagingResponse()
-
+    result=validate_num(num) 
+    resp.message(result)
     if 'stop' in incoming_msg:
         resp.message("We will be sad to see you go.")
         user = User.query.filter(User.number==num).first()
