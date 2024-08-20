@@ -23,6 +23,31 @@ def del_from_db(num):
         cursor.execute(f"DELETE FROM users WHERE id = {id}")
         cursor.commit()
 
+def validate_num(num,msg):
+    server = os.environ.get('SERVER')
+    database = os.environ.get('DATABASE')
+    username = os.environ.get('NAME')
+    password = os.environ.get('PASSWORD')
+
+    conn = pyodbc.connect(
+        'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
+    cursor = conn.cursor()
+
+    cursor.execute(f"SELECT PhoneNumber, ID FROM Campaign_Responses WHERE PhoneNumber='{num}'")
+
+    rows = cursor.fetchall()
+    conn.commit()
+    cursor.close()
+    conn.close()
+    
+   
+    if not rows:
+        return "Number is not validated"
+    else:
+            # Corrected SQL update statement
+        #cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE ID = ?", (msg, row[1]))
+         
+        return "Thank you! Number is validated"
 
 def get_data_ud(num, cursor):
 
