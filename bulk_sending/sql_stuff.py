@@ -24,7 +24,7 @@ def del_from_db(num):
         cursor.commit()
 
 def update_response(msg, num):
-     server = os.environ.get('SERVER')
+    server = os.environ.get('SERVER')
     database = os.environ.get('DATABASE')
     username = os.environ.get('NAME')
     password = os.environ.get('PASSWORD')
