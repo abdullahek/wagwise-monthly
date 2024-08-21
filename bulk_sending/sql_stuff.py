@@ -52,22 +52,16 @@ def validate_num(num):
   
     cursor = conn.cursor()
 
-    cursor.execute(f"SELECT PhoneNumber, ID FROM Campaign_Responses WHERE PhoneNumber='{num}'")
-
-    rows = cursor.fetchall()
-    conn.commit()
+    cursor.execute("SELECT PhoneNumber, ID FROM Campaign_Responses WHERE PhoneNumber=?", (num,))
+    row = cursor.fetchone()
     cursor.close()
     conn.close()
-    print(rows)    
+    print(row)    
    
     if not rows:
-
         return False
     else:
-            # Corrected SQL update statement
-        #cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE ID = ?", (msg, row[1]))
-         
-        return True
+         return True
 
 
 def get_data_ud(num, cursor):
