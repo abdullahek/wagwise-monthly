@@ -19,7 +19,7 @@ def bot():
 
 
     num = request.form.get('From')
-    num = num.replace('whatsapp:', '')
+    num = num.replace('whatsapp:+', '')
     incoming_msg = request.form.get('Body').lower()
 
     print("INCOMING MSG: " + incoming_msg)
