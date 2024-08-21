@@ -29,7 +29,7 @@ def update_response(msg, num):
     username = os.environ.get('NAME')
     password = os.environ.get('PASSWORD')
 
-     conn = pyodbc.connect(
+    conn = pyodbc.connect(
         'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
     cursor = conn.cursor()
     cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE PhoneNumber = ?", (msg, int(num)))
