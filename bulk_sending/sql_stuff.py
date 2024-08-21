@@ -58,7 +58,7 @@ def validate_num(num):
     conn.close()
     print(row)    
    
-    if not rows:
+    if not row:
         return False
     else:
          return True
