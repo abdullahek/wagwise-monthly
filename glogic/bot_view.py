@@ -30,9 +30,10 @@ def bot():
     if result:
         # resp.message("Thank you! Number is validated")
         response= update_response(incoming_msg, num)
+        resp.message("Thank you! Number is validated")
     else:
-        pass
-    #     resp.message("Number is not validated")
+        
+        resp.message("Number is not validated")
     
     
     if 'stop' in incoming_msg:
