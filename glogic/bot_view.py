@@ -23,10 +23,10 @@ def bot():
     yes_no=""
     if resp_start=="1":
         yes_no="Yes"
-        resp.message("Great! ")
+        resp.message("Great! Thank you for agreeing to participate!")
     elif resp_start=="2":
         yes_no="No"
-        resp.message("Great!")
+        resp.message("Sad to hear that.")
     else:
         yes_no="invalid response"
         resp.message("Please enter a valid response 1 or 2")
@@ -41,6 +41,6 @@ def bot():
     else: 
         print("Number is not validated")
               
-    resp.message("Thank you for agreeing to participate!")
+    
     return str(resp)    
     
