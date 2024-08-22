@@ -39,7 +39,7 @@ def bot():
         # resp.message("Thank you! Number is validated")
         response= update_response(yes_no, num)
     else: 
-        print("Number is not validated"")
+        print("Number is not validated")
               
     resp.message("Thank you for agreeing to participate!")
     
