@@ -30,8 +30,10 @@ def bot():
         resp.message("Sad to hear that.")
     elif resp_start=="a":
         call_data="Yes"
+        resp.message("Thank you! for your response.")
     elif resp_start=="b":
         call_data="No"
+        resp.message("Thank you! for your response.")
     else:
         yes_no="invalid response"
         resp.message("Please enter a valid response 1 or 2")
