@@ -18,22 +18,28 @@ def bot():
     # del session['count']
 
 
+    resp = MessagingResponse()
+    resp_start=request.form.get('Body').lower()
+    yes_no=""
+    if resp_start=="1":
+        yes_no="Yes"          
+    elif resp_start=="2":
+        yes_no="No"
+    else:
+        resp.message("Please enter 1 or 2")        
     num = request.form.get('From')
     num = num.replace('whatsapp:+', '')
     incoming_msg = request.form.get('Body').lower()
-
-    print("INCOMING MSG: " + incoming_msg)
-
-    resp = MessagingResponse()
-
+    print("INCOMING MSG: " + yes_no)
     result = validate_num(num) 
     if result:
         # resp.message("Thank you! Number is validated")
-        response= update_response(incoming_msg, num)
+        response= update_response(yes_no, num)
         resp.message("Thank you! Number is validated")
     else:
         
         resp.message("Number is not validated")
+
     
     
     if 'stop' in incoming_msg:
