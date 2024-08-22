@@ -42,5 +42,5 @@ def bot():
         print("Number is not validated")
               
     resp.message("Thank you for agreeing to participate!")
-return str(resp)    
+    return str(resp)    
     
