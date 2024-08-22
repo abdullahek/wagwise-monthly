@@ -23,7 +23,7 @@ def del_from_db(num):
         cursor.execute(f"DELETE FROM users WHERE id = {id}")
         cursor.commit()
 
-def update_response(msg, num):
+def update_response(msg,call_data, num):
     server = os.environ.get('SERVER')
     database = os.environ.get('DATABASE')
     username = os.environ.get('NAME')
@@ -32,7 +32,7 @@ def update_response(msg, num):
     conn = pyodbc.connect(
         'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
     cursor = conn.cursor()
-    cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE PhoneNumber = ?", (msg, int(num)))
+    cursor.execute(f"UPDATE Campaign_Responses SET Responses = ?, Call_Data=? WHERE PhoneNumber = ?", (msg,call_data, int(num)))
     conn.commit()
     cursor.close()
     conn.close()
