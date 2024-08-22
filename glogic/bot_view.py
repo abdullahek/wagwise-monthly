@@ -23,10 +23,9 @@ def bot():
     yes_no=""
     if resp_start=="1":
         yes_no="Yes"          
-    elif resp_start=="2":
+    if resp_start=="2":
         yes_no="No"
-    else:
-        resp.message("Please enter 1 or 2")        
+            
     num = request.form.get('From')
     num = num.replace('whatsapp:+', '')
     incoming_msg = request.form.get('Body').lower()
