@@ -32,7 +32,10 @@ def update_response(msg,call_data, num):
     conn = pyodbc.connect(
         'DRIVER={ODBC Driver 18 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
     cursor = conn.cursor()
-    cursor.execute(f"UPDATE Campaign_Responses SET Responses = ?, Call_Data=? WHERE PhoneNumber = ?", (msg,call_data, int(num)))
+    if msg:
+        cursor.execute(f"UPDATE Campaign_Responses SET Responses = ? WHERE PhoneNumber = ?", (msg, int(num)))
+    if call_data:
+        cursor.execute(f"UPDATE Campaign_Responses SET Call_Data = ? WHERE PhoneNumber = ?", (call_data, int(num)))  
     conn.commit()
     cursor.close()
     conn.close()
