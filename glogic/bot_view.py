@@ -14,8 +14,8 @@ def bot():
     call_data=""
     if user_input in ["1", "2"]:
         resp.message("Great! Thank you for agreeing to participate. Keep an eye out in September." if user_input == "1" else "We are sorry to hear that. It will only take a few minutes and will earn you R125.")
-        resp.message("We would also like to speak to you about how the WageWise programme has changed how you manage your money.\n\nIf you are willing to speak to us, please send a.\nIf you would prefer not to receive a call, send b.")
         yes_no = "Yes" if user_input == "1" else "No"
+        resp.message("We would also like to speak to you about how the WageWise programme has changed how you manage your money.\n\nIf you are willing to speak to us, please send a.\nIf you would prefer not to receive a call, send b.")
     elif user_input in ["a", "b"]:
         resp.message("Thank you for your response.")
         call_data = "Yes" if user_input == "a" else "No"
